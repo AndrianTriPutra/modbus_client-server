@@ -46,7 +46,7 @@ func (eh *exampleHandler) HandleHoldingRegisters(req *modbus.HoldingRegistersReq
 				switch req.Args[i] {
 				case 0, 1:
 					counter.ModbusData.Addr_3 = req.Args[i]
-					eh.holdingReg2 = counter.ModbusData.Addr_2
+					eh.holdingReg2 = counter.ModbusData.Addr_3
 
 					// make note of the change (e.g. for auditing purposes)
 					// fmt.Printf("%s set reg#3 to %v\n", req.ClientAddr, eh.holdingReg2)
