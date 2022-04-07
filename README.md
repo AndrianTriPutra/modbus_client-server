@@ -1,4 +1,4 @@
-# modbus_client-server
+# example modbus_client-server
 
 ### instruction
 - git clone https://github.com/AndrianTriPutra/modbus_client-server.git modbus
