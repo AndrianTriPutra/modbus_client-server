@@ -51,6 +51,12 @@ func Counter(ticker time.Ticker, stop chan bool) {
 
 			ModbusData.Addr_5++
 			ModbusData.Addr_6++
+			if ModbusData.Addr_5 > 65535 {
+				ModbusData.Addr_5 = 10000
+			} else if ModbusData.Addr_6 > 10000 {
+				ModbusData.Addr_6 = -10000
+			}
+			
 			//current unix time
 			ModbusData.UnixTs_s = uint32(time.Now().Unix() & 0xffffffff)
 			//the 16 most significant bits of the current unix time
@@ -58,11 +64,7 @@ func Counter(ticker time.Ticker, stop chan bool) {
 			//the 16 least significant bits of the current unix time
 			ModbusData.Addr_8 = uint16(ModbusData.UnixTs_s & 0xffff)
 
-			if ModbusData.Addr_5 > 65535 {
-				ModbusData.Addr_5 = 10000
-			} else if ModbusData.Addr_6 > 10000 {
-				ModbusData.Addr_6 = -10000
-			}
+			
 
 			ModbusData.Floting = math.Float32bits(3.1415)
 			//return 3.1415, encoded as a 32-bit floating point number in input
