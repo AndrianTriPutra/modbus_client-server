@@ -137,7 +137,7 @@ func Read(host string, slave_id byte, timeout time.Duration) ([]string, []string
 	str = fmt.Sprintf("%x", databyte)
 	hex = append(hex, str)
 
-	//marge register 7-8
+	//marge register 9-10
 	RIf32s := util.BytesToFloat32s(util.BIG_ENDIAN, util.HIGH_WORD_FIRST, databyte)
 	for _, val := range RIf32s {
 		fui := float32(val)
