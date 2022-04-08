@@ -16,7 +16,7 @@ func Write(host string, slave_id byte, timeout time.Duration) error {
 
 	var dw = [3]int{700, 0, 50}
 	var output []byte
-	outputFinal := []byte{}
+	var outputFinal []byte
 	for i := 0; i < 3; i++ {
 		output = intToHex(int64(dw[i]))
 		output = append(output[:0], output[6:]...)
