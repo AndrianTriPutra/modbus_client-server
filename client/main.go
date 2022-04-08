@@ -15,8 +15,8 @@ import (
 	//input register
 	reg  5 uint16
 	reg  6 int16
-	7,8 uint16 (alfa: (hex7 + hex8)to uint32)
-	9,10 uint16 (alfa: (hex9 + hex10)to float32)
+	7,8  (hex7 + hex8) to uint32
+	9,10 (hex9 + hex10) to float32
 */
 
 func main() {
