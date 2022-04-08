@@ -8,6 +8,7 @@
 - please check/change port 
 - switch to terminal 1, go run .
 - switch to terminal 2, go run . 1
+- for more information : https://andriantriputra.medium.com/golang-raspberry-chapter-10-modbus-tcp-client-dan-server-bcfa7919c4ae
 
 ### dependency
 - github.com/goburrow/modbus
